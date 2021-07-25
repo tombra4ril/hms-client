@@ -1,0 +1,27 @@
+.title-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: var(--light-white);
+}
+.title-div > *:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-div > div:last-child{
+  display: flex;
+  justify-content: space-between;
+}
+.title-staff + .title-staff{
+  border-left: solid 1px var(--gray);
+  padding-left: 5px;
+}
+.title-staff:not(.title-staff:last-child){
+  padding-right: 5px;
+}
+.title-staff p:last-child{
+  text-align: center;
+  color: var(--light-blue);
+}

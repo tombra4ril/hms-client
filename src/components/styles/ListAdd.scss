@@ -1,0 +1,17 @@
+.section-content-head{
+  display: flex;
+  color: var(--white);
+  padding: 10px 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.section-content-head + .section-content-head{
+  margin-left: 10px;
+}
+.section-content-child{
+  padding-right: 5px;
+}
+.section-content-head.active{
+  background-color: var(--white);
+  color: var(--black);
+}

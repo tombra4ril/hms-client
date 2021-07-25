@@ -1,0 +1,64 @@
+.dashboard-icons-div{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 100px 50px;
+  overflow-x: hidden;
+}
+.dashboard-icons-div > div{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  height: 120px;
+  overflow: hidden;
+}
+.dashboard-icons-div > div:hover{
+  box-shadow: 1px 1px 2px 2px var(--blue);
+}
+.dashboard-icons-div > div span:first-child{
+  margin-bottom: 10px;
+}
+.icons-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+[data-title]{
+  position: relative;
+}
+[data-title]::after {
+  background-color: #fff;
+  color: #222;
+  font-size:14px;
+  padding: 8px 12px;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 6px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  content: attr(data-title);
+  transform: translate(-50%, 110%) scale(0);
+  transform-origin: top;
+  transition: 0.14s;
+  box-shadow: 0 4px 14px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.05);
+}
+[data-title]:hover:after {
+  display: block;
+  transform: translate(-50%, 110%) scale(1);
+}
+
+@media screen and (max-width: 1000px){
+  .dashboard-icons-div{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

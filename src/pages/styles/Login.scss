@@ -1,0 +1,133 @@
+.login-comp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-div{
+  min-width: 200px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 1px var(--white);
+  box-shadow: 2px 2px 10px 2px var(--gray);
+  animation: login-div-animate 2s;
+  position: relative;
+}
+@keyframes login-div-animate{
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 0;
+  }
+}
+.login-icon-div{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login-icon-div > div:first-child{
+  margin-bottom: 10px;
+}
+.login-icon{
+  font-size: 48px;
+  color: var(--white);
+  line-height: 50px;
+}
+.login-icon-div > div:first-child{
+  background-color: var(--red);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 8px;
+}
+.login-text{
+  font-size: 1.5em;
+}
+.login-div form{
+  padding: 0px 20px;
+}
+.form-div{
+  width: 100%;
+}
+.error-div{
+  color: var(--red)
+}
+.login-div form > div{
+  margin-top: 20px;
+}
+.input-div{
+  position: relative;
+}
+.input-div span{
+  position: absolute;
+  font-size: 36px;
+  top: 50%;
+  z-index: 10;
+  padding: 0px 10px;
+  transform: translateY(-50%);
+  color: var(--blue);
+}
+.input-div span:first-child{
+  transform-origin: 50%;
+  border-right: solid 1px var(--gray);
+  left: 0;
+}
+.input-div span:last-child{
+  cursor: pointer;
+  right: 0;
+}
+.input-field{
+  height: 50px;
+  border: solid 1px var(--gray);
+  border-radius: 5px;
+}
+.icon-input{
+  padding-left: 66px;
+  padding-right: 66px;
+  display: inline-block;
+  width: 100%;
+  outline: none;
+}
+.select-div select{
+  display: inline-block;
+  width: 100%;
+  padding-left: 10px;
+  outline: none;
+}
+.submit-div input{
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--blue);
+}
+.submit-div input:hover{
+  border: none;
+  box-shadow: 2px 2px 10px 2px var(--gray);
+}
+.user-and-password-div{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+}
+.forget-password-div{
+  padding: 0px 10px;
+  margin: 20px 0px;
+}
+
+@media only screen and (max-width: 1000px){
+  .input-div span{
+    font-size: 24px;
+  }
+  .icon-input{
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}

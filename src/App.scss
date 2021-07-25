@@ -1,0 +1,210 @@
+:root{
+  --red: rgba(200, 20, 20, 0.8);
+  --blue: rgba(20, 40, 240, 0.7);
+  --light-blue: rgba(15, 30, 220, 0.6);
+  --white: rgba(255, 255, 255, 0.9);
+  --light-white: rgba(220, 220, 220, 0.9);
+  --gray: rgba(100, 100, 100, 0.5);
+  --black: rgba(20, 20, 20, 0.8);
+  --black-transparent: rgba(50, 50, 50, 0.5);
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+html, #root{
+  height: 100%;
+}
+body{
+  background-color: #eeeeee;
+  min-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+.hidden{
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.body-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  // background-color: var(--white);
+}
+.content-section{
+  margin-bottom: 50px;
+}
+
+/* Animation on reload */
+.animate-reload-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.animate-reload{
+  color: var(--blue);
+  font-size: 100px;
+  animation: reload-animation 1s linear infinite;
+}
+
+.loading-spinner{
+  color: var(--white);
+  position: absolute;
+  animation: reload-animation 1s linear infinite;
+}
+
+@keyframes reload-animation{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes reload-animation{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.loading-button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-visibility{
+  visibility: hidden;
+}
+
+.low-opacity{
+  opacity: 0.8;
+}
+
+/* */
+.red{
+  background-color: var(--red);
+}
+.red{
+  background-color: var(--red);
+}
+.blue{
+  background-color: var(--blue);
+}
+.white{
+  background-color: var(--white);
+}
+.components-section{
+  display: grid;
+  // grid-template-columns: auto 1fr;
+  grid-template-columns: 200px 1fr;
+}
+.section{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-columns: 200px 1fr;
+}
+.align-center{
+  text-align: center;
+}
+.flex-element{
+  display: flex;
+}
+.flex-row{
+  flex-direction: row;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-d-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-left{
+  justify-content: left;
+}
+.flex-right{
+  justify-content: right;
+}
+.flex-self-end{
+  justify-self: end;
+}
+.flex-just-sp-between{
+  justify-content: space-between;
+}
+.flex-just-sp-around{
+  justify-content: space-around;
+}
+.flex-align-center{
+  align-items: center;
+}
+.color-w{
+  color: var(--white);
+}
+.bg-blue{
+  background-color: var(--blue);
+}
+.bg-red{
+  background-color: var(--red);
+}
+.pointer{
+  cursor: pointer;
+}
+
+/* Modal css styling */
+#modal{
+  margin: 0;
+  position: fixed;
+  z-index: 10;
+  top: 70px;
+  right: -100%;
+  border-radius: 10px;
+  transition: all 1s linear;
+}
+#modal .modal-content{
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal .modal-content.success{
+  background-color: rgb(75, 211, 141);
+}
+#modal .modal-content.failure{
+  background-color: rgba(158, 57, 46, 1);
+}
+#modal .modal-content p{
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 20px;
+  color: var(--white);
+}
+#modal .modal-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
+}
+#modal.show{
+  transition: all 1s linear;
+  right: 10px;
+}
+#modal.hide{
+  transition: all 1s linear;
+  right: -100%;
+}
